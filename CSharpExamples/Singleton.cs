@@ -2,7 +2,7 @@
 {
     public class Singleton
     {
-        private Singleton singleton;
+        private Singleton singletonInstance;
 
         private string mySingletonInfo;
 
@@ -13,12 +13,12 @@
 
         public Singleton GetInstante()
         {
-            if (singleton.Equals(null))
+            if (singletonInstance.Equals(null))
             {
-                singleton = new Singleton();
+                singletonInstance = new Singleton();
             }
 
-            return singleton;
+            return singletonInstance;
         }
     }
 }
